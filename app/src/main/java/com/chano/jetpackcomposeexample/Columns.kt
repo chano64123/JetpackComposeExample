@@ -51,11 +51,10 @@ class Columns : ComponentActivity() {
 fun ViewContainer() {
     Scaffold(
         topBar = { ToolBar() },
+        content = { Content() },
         floatingActionButton = { FAB() },
         floatingActionButtonPosition = FabPosition.End
-    ){x ->
-        Content()
-    }
+    )
 }
 
 @Preview
