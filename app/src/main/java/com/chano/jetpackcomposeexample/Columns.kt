@@ -9,6 +9,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -51,7 +52,7 @@ class Columns : ComponentActivity() {
 fun ViewContainer() {
     Scaffold(
         topBar = { ToolBar() },
-        content = { Content() },
+        content = { padding -> Content(padding) },
         floatingActionButton = { FAB() },
         floatingActionButtonPosition = FabPosition.End
     )
@@ -84,7 +85,7 @@ fun ToolBar() {
 
 @Preview(showBackground = true)
 @Composable
-fun Content() {
+fun Content(padding: PaddingValues = 16.dp as PaddingValues) {
     var counter by rememberSaveable {
         mutableStateOf(0)
     }
@@ -92,8 +93,8 @@ fun Content() {
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.DarkGray)
-            .padding(16.dp)
+            .background(Color.Black)
+            .padding(padding)
     ) {
         item {
             Image(
