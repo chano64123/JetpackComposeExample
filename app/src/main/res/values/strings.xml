@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">JetpackComposeExample</string>
     <string name="title_activity_columns">Columns</string>
+    <string name="title_activity_map">MapActivity</string>
 </resources>
